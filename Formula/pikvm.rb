@@ -5,7 +5,7 @@
 class Pikvm < Formula
   desc "PiKVM ATX power control — terminal UI and CLI"
   homepage "https://github.com/j4y-w4lk3r/pikvm"
-  version "0.3.5"
+  version "0.3.6"
   license "MIT"
 
   depends_on "chafa" => :optional
@@ -15,16 +15,16 @@ class Pikvm < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/j4y-w4lk3r/pikvm/releases/download/v0.3.5/pikvm_0.3.5_darwin_x86_64.tar.gz"
-      sha256 "11d66f4898551410aab1ccee9589fc212d52775f7ef60baa7c5fb8c7c8615bbe"
+      url "https://github.com/j4y-w4lk3r/pikvm/releases/download/v0.3.6/pikvm_0.3.6_darwin_x86_64.tar.gz"
+      sha256 "701b5816afabb22ab31c01fdb69f34bb34468636755d05329da4b10ddbdd1c5a"
 
       define_method(:install) do
         bin.install "pikvm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/j4y-w4lk3r/pikvm/releases/download/v0.3.5/pikvm_0.3.5_darwin_arm64.tar.gz"
-      sha256 "2fbad1b2ac3dfd2d44baad6ad36d31c45d660c98d56e3191c35122167b155a3f"
+      url "https://github.com/j4y-w4lk3r/pikvm/releases/download/v0.3.6/pikvm_0.3.6_darwin_arm64.tar.gz"
+      sha256 "aa0c9a0aa38f5a2af47de9e9c91fb422f6fbfdccd32903080eed3b19b67f155e"
 
       define_method(:install) do
         bin.install "pikvm"
@@ -34,15 +34,15 @@ class Pikvm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/j4y-w4lk3r/pikvm/releases/download/v0.3.5/pikvm_0.3.5_linux_x86_64.tar.gz"
-      sha256 "3563d0e471ebe866070b29a451a612eb51af11e41293dc1749ffbac82a6eb230"
+      url "https://github.com/j4y-w4lk3r/pikvm/releases/download/v0.3.6/pikvm_0.3.6_linux_x86_64.tar.gz"
+      sha256 "81fbaee97830e0f8edd50b5a1e90a9a3ec8fcd186eb1ad0dc9117276a302c5ca"
       define_method(:install) do
         bin.install "pikvm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/j4y-w4lk3r/pikvm/releases/download/v0.3.5/pikvm_0.3.5_linux_arm64.tar.gz"
-      sha256 "89548d90403e3cdb2f50958327329c3ea069761bf909399ff11fd723d9b32b9e"
+      url "https://github.com/j4y-w4lk3r/pikvm/releases/download/v0.3.6/pikvm_0.3.6_linux_arm64.tar.gz"
+      sha256 "7e284d21ef3e70197833c07ac2392d518c1f8b9cdcbeedba61d2acb7b5385700"
       define_method(:install) do
         bin.install "pikvm"
       end
